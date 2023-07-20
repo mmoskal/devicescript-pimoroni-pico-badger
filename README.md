@@ -1,53 +1,20 @@
-# - project name -
+# DeviceScript definitions for Pimoroni Badger RP2040
 
-This project uses [DeviceScript](https://microsoft.github.io/devicescript/).
+## Supported devices
 
-## Project structures
+![Pimoroni Badger RP2040 Pico W](./assets/badger-w.jpg)
 
+https://shop.pimoroni.com/products/badger-2040-w
+
+## Usage
+
+```ts
+import { font8, scaledFont } from "@devicescript/graphics"
+import { PimoroniBadger2040W } from "devicescript-pimoroni-pico-badger"
+
+const board = new PimoroniBadger2040W()
+const disp = await board.startDisplay()
+const f = scaledFont(font8(), 3)
+disp.image.print("Hello world!", 10, 10, 1, f)
+await disp.show()
 ```
-.devicescript      reserved folder for devicescript generated files
-src/main.ts        default DeviceScript entry point
-...
-```
-
-
-## Local/container development
-
--  install [Node.js LTS 16+](https://nodejs.org/en/download)
-
-```bash
-nvm install 16
-nvm use 16
-```
-
--  install DeviceScript compiler and tools
-
-```bash
-npm install
-```
-
-### Using Visual Studio Code
-
-- open the project folder in code
-
-```bash
-code .
-```
-
-- install the [DeviceScript extension](https://microsoft.github.io/devicescript/getting-started/vscode)
-
-- start debugging!
-
-### Using the command line
-
-- start the watch build and developer tools server
-
-```bash
-npm run watch
-```
-
--  navigate to devtools page (see terminal output) 
-to use the simulators or deploy to hardware.
-
--  open `src/main.ts` in your favorite TypeScript IDE and start editing.
-
