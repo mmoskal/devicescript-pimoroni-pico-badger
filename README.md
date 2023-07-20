@@ -2,7 +2,7 @@
 
 ## Supported devices
 
-![Pimoroni Badger RP2040 Pico W](./assets/badger-w.jpg)
+![Pimoroni Badger RP2040 Pico W](https://github.com/mmoskal/devicescript-pimoroni-pico-badger/raw/main/assets/badger-w.jpg)
 
 https://shop.pimoroni.com/products/badger-2040-w
 
